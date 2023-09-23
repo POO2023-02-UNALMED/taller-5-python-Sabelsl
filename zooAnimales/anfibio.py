@@ -1,4 +1,7 @@
+
+
 from zooAnimales.animal import Animal
+
 
 class Anfibio(Animal):
 
@@ -6,11 +9,17 @@ class Anfibio(Animal):
     ranas = 0
     salamandras = 0
 
-    def _init_(self, nombre, edad, habitat, genero, colorPiel, venenoso):
-        super()._init_(nombre, edad, habitat, genero)
+    def __init__(self, nombre, edad, habitat, genero, colorPiel, venenoso):
+        super().__init__(nombre, edad, habitat, genero)
         self._colorPiel = colorPiel
         self._venenoso = venenoso
         self._listado.append(self)
+        
+    def setListado(self,listado):
+        self._listado = listado
+        
+    def getListado(self):
+        return self._listado
     
     def setColorPiel(self, colorPiel):
         self._colorPiel = colorPiel
@@ -22,16 +31,18 @@ class Anfibio(Animal):
     def isVenenoso(self):
         return self._venenoso
     
-    def crearRana(self, nombre, edad, genero):
+    def crearRana(self, nombre, edad, genero=None):
         rana = Anfibio(nombre, edad, "selva", genero, "rojo", True)
-        ranas += 1
-        return rana
+        Anfibio._listado.append(rana)
+        Anfibio.ranas += 1
+        return Anfibio.ranas
 
-    def crearSalamandra(self, nombre, edad, genero):
+    def crearSalamandra(self, nombre, edad, genero=None):
         salamandra = Anfibio(nombre, edad, "selva", genero, "negro y amarillo", False)
-        salamandras += 1
-        return salamandra
+        Anfibio._listado.append(salamandra)
+        Anfibio.salamandras += 1
+        return Anfibio.salamandras
     
     @classmethod
-    def cantidadAnfibios(self):
+    def cantidadAnfibios(cls):
         return len(cls._listado)

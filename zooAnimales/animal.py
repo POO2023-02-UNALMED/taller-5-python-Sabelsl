@@ -45,7 +45,6 @@ class Animal:
     def getTotalAnimales(self):
         return self._totalAnimales
     
-    @classmethod
     def totalPorTipo(cls):
         from zooAnimales.anfibio import Anfibio
         from zooAnimales.ave import Ave

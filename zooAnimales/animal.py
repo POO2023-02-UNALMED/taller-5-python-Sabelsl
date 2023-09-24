@@ -47,11 +47,6 @@ class Animal:
     
     @classmethod
     def totalPorTipo(cls):
-        from zooAnimales.anfibio import Anfibio
-        from zooAnimales.ave import Ave
-        from zooAnimales.mamifero import Mamifero
-        from zooAnimales.pez import Pez
-        from zooAnimales.reptil import Reptil
         
         mensaje = "Mamiferos: " + str(Mamifero.cantidadMamiferos()) + "\nAves: " + str(Ave.cantidadAves()) + "\nReptiles: " + str(Reptil.cantidadReptiles()) + "\nPeces: " + str(Pez.cantidadPeces()) + "\nAnfibios: " + str(Anfibio.cantidadAnfibios())
         
@@ -59,9 +54,9 @@ class Animal:
 
     def toString(self):
         if self._zona is None:
-            mensaje = f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en  {self._habitat} y mi genero es {self._genero}"
+            mensaje = f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}"
             return mensaje
         else:
-            mensaje = "Mi nombre es" + self._nombre + ", tengo una edad de" + str(self._edad) +  ", habito en" + self._habitat + "y mi genero es", self._genero, " + la zona en la que me ubico es" + self._zona + ", en el zoo" + self._zona.getZoo()
+            mensaje = f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self._zona}, en el {self._zona.getZoo()}"
             return mensaje
         

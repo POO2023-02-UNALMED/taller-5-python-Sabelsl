@@ -64,3 +64,4 @@ def testReptil():
     if rep1.getNombre() == "lagartija" and rep1.getEdad() == 1 and rep1.getHabitat() == "casa" and rep1.getGenero() == "F" and rep1.getColorEscamas() == "cafe" and rep1.getLargoCola() == 1:
         ok = True
     assert(ok)
+    

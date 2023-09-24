@@ -10,6 +10,7 @@ class Pez(Animal):
         super().__init__(nombre, edad, habitat, genero)
         self._colorEscamas = colorEscamas
         self._cantidadAletas = cantidadAletas
+        self._listado.append(self)
                 
     def setListado(listado):
         Pez._listado = listado
@@ -30,16 +31,14 @@ class Pez(Animal):
     @staticmethod
     def crearSalmon(nombre, edad, genero=None):
         salmon = Pez(nombre, edad, "oceano", genero, "rojos", 6)
-        Pez._listado.append(salmon)
         Pez.salmones += 1
-        return Pez.salmones
+        return salmon
     
     @staticmethod
     def crearBacalao(nombre, edad, genero=None):
         bacalao = Pez(nombre, edad, "oceano", genero, "gris", 6)
-        Pez._listado.append(bacalao)
         Pez.bacalaos += 1
-        return Pez.bacalaos
+        return bacalao
     
     
     def cantidadPeces():

@@ -40,6 +40,6 @@ class Pez(Animal):
         Pez.bacalaos += 1
         return bacalao
     
-    
-    def cantidadPeces():
-        return len(Pez._listado)
+    @classmethod
+    def cantidadPeces(cls):
+        return len(cls._listado)

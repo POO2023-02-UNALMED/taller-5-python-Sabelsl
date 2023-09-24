@@ -1,9 +1,10 @@
 class Zona:
-    _animales = []
+    
     
     def __init__(self, nombre, zoo=None):
         self._nombre = nombre
         self._zoo = zoo
+        self._animales = []
     
     def setNombre(self, nombre):
         self._nombre = nombre

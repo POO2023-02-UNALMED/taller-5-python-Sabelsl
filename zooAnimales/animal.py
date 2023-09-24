@@ -1,16 +1,27 @@
+
+
+
+ 
+from zooAnimales.ave import Ave
+from zooAnimales.mamifero import Mamifero
+from zooAnimales.pez import Pez
+from zooAnimales.reptil import Reptil
+
+
 class Animal:
-    
     _totalAnimales = 0
-    _edad= 0
     
     def __init__(self, nombre, edad, habitat, genero, zona=None):
         self._nombre = nombre
         self._edad = edad
         self._habitat = habitat
         self._genero = genero
-        Animal._totalAnimales += 1
         self._zona = zona
-    
+        self._edad= 0
+            
+        Animal._totalAnimales += 1
+        
+        
     def setNombre(self, nombre):
         self._nombre = nombre
     def getNombre(self):
@@ -45,10 +56,13 @@ class Animal:
     def getTotalAnimales(self):
         return self._totalAnimales
     
-    def totalPorTipo(self):
-        
-        #mensaje = "Mamiferos: " + str(Mamifero.cantidadMamiferos()) + "\nAves: " + str(Ave.cantidadAves()) + "\nReptiles: " + str(Reptil.cantidadReptiles()) + "\nPeces: " + str(Pez.cantidadPeces()) + "\nAnfibios: " + str(Anfibio.cantidadAnfibios())
-        return 1 
+    
+    def totalPorTipo():
+        print(cls)
+        #mensaje = ""
+        mensaje = "Mamiferos: " + str(Mamifero.cantidadMamiferos()) + "\nAves: " + str(Ave.cantidadAves()) + "\nReptiles: " + str(Reptil.cantidadReptiles()) + "\nPeces: " + str(Pez.cantidadPeces()) + "\nAnfibios: " + str(Anfibio.cantidadAnfibios())
+        print(mensaje)
+        return mensaje
 
     def toString(self):
         if self._zona is None:

@@ -32,3 +32,6 @@ def testToString():
     if ave1.toString() ==  comp:
         ok = True
     assert(ok)
+    
+""" testTotalTipo()
+testToString() """

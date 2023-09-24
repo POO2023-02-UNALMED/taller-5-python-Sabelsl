@@ -1,11 +1,7 @@
-
-
-
- 
 from zooAnimales.ave import Ave
 from zooAnimales.mamifero import Mamifero
 from zooAnimales.pez import Pez
-from zooAnimales.reptil import Reptil
+from zooAnimales.reptil import Reptil 
 
 
 class Animal:
@@ -58,10 +54,9 @@ class Animal:
     
     
     def totalPorTipo():
-        print(cls)
-        #mensaje = ""
+        
         mensaje = "Mamiferos: " + str(Mamifero.cantidadMamiferos()) + "\nAves: " + str(Ave.cantidadAves()) + "\nReptiles: " + str(Reptil.cantidadReptiles()) + "\nPeces: " + str(Pez.cantidadPeces()) + "\nAnfibios: " + str(Anfibio.cantidadAnfibios())
-        print(mensaje)
+        
         return mensaje
 
     def toString(self):

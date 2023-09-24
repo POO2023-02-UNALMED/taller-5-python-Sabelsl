@@ -7,6 +7,7 @@ from zooAnimales.pez import Pez
 from zooAnimales.reptil import Reptil
 from zooAnimales.animal import Animal
 
+
 def testTotalTipo():
     Anfibio.crearRana("test", 11, "M")
     Anfibio.crearSalamandra("test", 11, "M")
@@ -33,5 +34,4 @@ def testToString():
         ok = True
     assert(ok)
     
-""" testTotalTipo()
-testToString() """
+    

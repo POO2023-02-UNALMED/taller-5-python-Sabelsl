@@ -9,10 +9,11 @@ class Mamifero(Animal):
         super().__init__(nombre, edad, habitat, genero)
         self._pelaje = pelaje
         self._patas = patas
-  
+
         self._pelaje = False
-       
+
         self._patas= 0
+        
 
         
     def setListado(listado):
@@ -47,6 +48,5 @@ class Mamifero(Animal):
         Mamifero.leones += 1
         return Mamifero.leones
     
-   
     def cantidadMamiferos():
         return len(Mamifero._listado)

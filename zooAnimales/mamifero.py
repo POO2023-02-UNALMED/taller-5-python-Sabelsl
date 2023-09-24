@@ -48,5 +48,6 @@ class Mamifero(Animal):
         Mamifero.leones += 1
         return Mamifero.leones
     
-    def cantidadMamiferos():
-        return len(Mamifero._listado)
+    @classmethod
+    def cantidadMamiferos(cls):
+        return len(cls._listado)

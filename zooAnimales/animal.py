@@ -45,7 +45,7 @@ class Animal:
     def getTotalAnimales(self):
         return self._totalAnimales
     
-    def totalPorTipo(cls):
+    def totalPorTipo():
         from zooAnimales.anfibio import Anfibio
         from zooAnimales.ave import Ave
         from zooAnimales.mamifero import Mamifero

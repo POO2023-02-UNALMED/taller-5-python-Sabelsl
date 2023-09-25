@@ -11,7 +11,20 @@ class Mamifero(Animal):
         self._patas = patas
         self._listado.append(self)
         
-
+    @staticmethod
+    def cantidadMamiferos():
+        return len(Mamifero._listado)
+    
+    @classmethod
+    def crearCaballo(cls,nombre, edad, genero=None):
+        cls.caballos += 1 
+        return cls(nombre, edad, "pradera", genero, True, 4)
+    
+    @classmethod
+    def crearLeon(cls,nombre, edad, genero=None):
+        cls.leones += 1 
+        return cls(nombre, edad, "selva", genero, True, 4)
+    
     def setListado(listado):
         Mamifero._listado = listado
         
@@ -27,19 +40,5 @@ class Mamifero(Animal):
         self._patas = patas
     def getPatas(self):
         return self._patas
+    
 
-    @staticmethod
-    def crearCaballo(nombre, edad, genero=None):
-        caballo = Mamifero(nombre, edad, "pradera", genero, True, 4)
-        Mamifero.caballos +=1
-        return caballo
-    
-    @staticmethod
-    def crearLeon(nombre, edad, genero=None):
-        leon = Mamifero(nombre, edad, "selva", genero, True, 4)
-        Mamifero.leones += 1
-        return leon
-    
-    @classmethod
-    def cantidadMamiferos(cls):
-        return len(cls._listado)

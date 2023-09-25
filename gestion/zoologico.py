@@ -1,12 +1,11 @@
 class Zoologico:
-    
+    _zonas = []
     
 
     def __init__(self, nombre, ubicacion):
         self._nombre = nombre
         self._ubicacion = ubicacion
-        self._zonas = []
-    
+        
         
     def setNombre(self, nombre):
         self._nombre = nombre
@@ -18,16 +17,18 @@ class Zoologico:
     def getUbicacion(self):
         return self._ubicacion
     
-    def setZonas(self,zonas):
-        self._zonas = zonas
+    @classmethod
+    def setZona(cls, zonas):
+        cls._zonas = zonas
         
-    def getZona(self):
-        return self._zonas
+    @classmethod   
+    def getZona(cls):
+        return cls._zonas
     
     def cantidadTotalAnimales(self):
         sumaAnimalesZonas = 0
         for zona in self._zonas:
-            sumaAnimalesZonas += len(zona.getAnimales())
+            sumaAnimalesZonas += zona.cantidadAnimales()
             
         return sumaAnimalesZonas
 
